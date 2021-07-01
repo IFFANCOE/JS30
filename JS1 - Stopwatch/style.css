@@ -14,7 +14,7 @@ h1, h2 ,h3 {
     font-weight: 100;
     text-transform: uppercase;
 }
-#seconds, #tens { /* id  */
+#hours, #seconds, #tens { /* id  */
     font-size: 2rem;
 }
 button{

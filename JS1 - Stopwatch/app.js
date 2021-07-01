@@ -1,9 +1,11 @@
 // web load done use this function
 window.onload = function change() {
-    var seconds = 00;  // 00 : 
-    var tens = 00;     //    : 00 
+    var seconds = 00;   //      :00 :
+    var tens = 00;      //      :   :00
+    var hours = 00;     //    00:   :
     var getIdSeconds = document.getElementById("seconds");
     var getIdTens = document.getElementById("tens");
+    var getIdHours = document.getElementById("hours")
     var buttonStart = document.getElementById("btn-Start")
     var buttonStop = document.getElementById("btn-Stop")
     var buttonReset = document.getElementById("btn-Reset")
@@ -20,8 +22,10 @@ window.onload = function change() {
         clearInterval(Interval);
         tens = "00";
         seconds = "00";
+        hours = "00";
         getIdTens.innerHTML = tens;
         getIdSeconds.innerHTML = seconds;
+        getIdHours.innerHTML = hours;
     }
     function startTimer() {
         tens++;
@@ -31,17 +35,22 @@ window.onload = function change() {
         if (tens > 9) {
             getIdTens.innerHTML = tens;
         }
-        if (tens > 99){
+        if (tens > 99) {
             seconds++;
             getIdSeconds.innerHTML = "0" + seconds;
             tens = 0;
-            getIdTens.innerHTML = "0" + 0 ;
+            getIdTens.innerHTML = "0" + 0;
         }
-        if(seconds > 9){
-            getIdSeconds.innerHTML = seconds ;
+        if (seconds > 9) {
+            getIdSeconds.innerHTML = seconds;
+        }
+        if (seconds > 99) {
+            hours++;
+            getIdHours.innerHTML = "0" + hours;
+            seconds = 0;
+            getIdSeconds.innerHTML = "0"+ 0;
         }
 
-        
 
     }
 }
