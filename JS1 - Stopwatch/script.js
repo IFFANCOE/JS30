@@ -1,8 +1,8 @@
 // web load done use this function
 window.onload = function change() {
-    var seconds = 00;   //      :00 :
-    var tens = 00;      //      :   :00
-    var hours = 00;     //    00:   :
+    var seconds = 00;   //-      : 00 :
+    var tens = 00;      //-      :    : 00
+    var hours = 00;     //-   00 :    :
     var getIdSeconds = document.getElementById("seconds");
     var getIdTens = document.getElementById("tens");
     var getIdHours = document.getElementById("hours")
@@ -13,7 +13,7 @@ window.onload = function change() {
 
     buttonStart.onclick = function () {
         clearInterval(Interval); // clear time before value
-        Interval = setInterval(startTimer, 10) // 1000 = 1s
+        Interval = setInterval(startTimer, 100) // 1000 = 1s
     }
     buttonStop.onclick = function () {
         clearInterval(Interval); // stop time now
